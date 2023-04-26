@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-manrope: Manrope;
+  --header-header-h3: Roboto;
+
+  /* font sizes */
+  --font-size-3xs: 10px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+  --font-size-lg: 18px;
+  --font-size-base: 16px;
+  --font-size-xl: 20px;
+  --header-header-h3-size: 24px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-whitesmoke-100: #f7f7f7;
+  --color-whitesmoke-200: #f2f2f2;
+  --color-whitesmoke-300: #eee;
+  --color-seagreen: #427a5b;
+  --color-darkgray-100: #b3b3b3;
+  --color-darkgray-300: #9f9f9f;
+  --color-dimgray: #4c4c4c;
+  --color-gray-300: #fcfcfc;
+  --color-gray-100: #808080;
+  --color-gray-200: #7a7a7a;
+  --color-black: #000;
+  --color-gainsboro: #e6e6e6;
+  --color-gainsboro-100: #d8d8d8;
+  --color-mediumslateblue-300: #7b61fe;
+  --color-mediumslateblue-100: rgba(123, 97, 254, 0.58);
+  --color-mediumslateblue-200: rgba(123, 97, 254, 0.64);
+  --color-indianred: #a65959;
+  --color-mistyrose: #eddede;
+  --color-honeydew: #deede5;
+
+  /* Gaps */
+  --gap-5xl: 24px;
+  --gap-5xs: 8px;
+  --gap-base: 16px;
+  --gap-7xs: 6px;
+  --gap-xs: 12px;
+
+  /* Paddings */
+  --padding-5xs: 8px;
+  --padding-5xl: 24px;
+  --padding-base: 16px;
+  --padding-xs: 12px;
+  --padding-9xs: 4px;
+
+  /* border radiuses */
+  --br-8xs: 5px;
+  --br-9xs: 4px;
+  --br-3xs: 10px;
+  --br-5xs: 8px;
+  --br-7xs: 6px;
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-roboto: Roboto;
+  --font-manrope: Manrope;
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-mediumslateblue-100: #7b61fe;
+  --color-mediumslateblue-200: rgba(123, 97, 254, 0.64);
+  --color-whitesmoke-100: #f2f2f2;
+  --color-whitesmoke-200: #eee;
+  --color-plum: #c2b6ff;
+  --color-gray: #808080;
+  --color-black: #000;
+  --color-indianred: #a65959;
+  --color-dimgray: #4c4c4c;
+
+  /* Gaps */
+  --gap-xs: 12px;
+
+  /* Paddings */
+  --padding-base: 16px;
+  --padding-xs: 12px;
+  --padding-5xs: 8px;
+  --padding-5xl: 24px;
+
+  /* border radiuses */
+  --br-5xs: 8px;
+  --br-9xs: 4px;
+}
+
