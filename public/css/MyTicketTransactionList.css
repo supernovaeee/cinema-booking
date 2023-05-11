@@ -1,0 +1,334 @@
+.my-ticket-transaction-list-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  width: 313px;
+  height: 1406px;
+}
+.my-ticket-transaction-list-item {
+  position: absolute;
+  top: 0;
+  left: 271px;
+  background-color: var(--shade-300);
+  width: 1px;
+  height: 1278px;
+  display: none;
+}
+.my-ticket {
+  position: absolute;
+  top: 158px;
+  left: 111px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.list-of-tickets {
+  position: absolute;
+  top: 201px;
+  left: 111px;
+  font-size: var(--other-roboto-bold-16-size);
+  line-height: 24px;
+  color: var(--shade-600);
+}
+.picture-icon3 {
+  position: relative;
+  width: 135px;
+  height: 202px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.spiderman-no-way1 {
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+}
+.kamis-16-desember {
+  position: relative;
+  font-size: var(--other-roboto-bold-16-size);
+  color: var(--shade-700);
+}
+.title-and-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.location-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.grand-indonesia-cgv1 {
+  position: relative;
+  line-height: 24px;
+}
+.regular-2d1 {
+  position: relative;
+  font-weight: 500;
+  color: var(--shade-700);
+}
+.content12,
+.description,
+.location {
+  display: flex;
+  justify-content: flex-start;
+}
+.location {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-8xs);
+  font-size: var(--other-roboto-bold-16-size);
+  color: var(--shade-400);
+}
+.content12,
+.description {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xl);
+}
+.content12 {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-29xl);
+}
+.berhasil {
+  position: relative;
+  font-size: var(--other-roboto-bold-16-size);
+  font-weight: 500;
+  font-family: var(--header-header-h3);
+  color: var(--shade-200);
+  text-align: left;
+}
+.my-ticket1,
+.status {
+  display: flex;
+  flex-direction: row;
+}
+.status {
+  border: 0;
+  padding: var(--padding-3xs) var(--padding-5xl);
+  background-color: var(--sky-blue);
+  border-radius: var(--br-9xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.my-ticket1 {
+  text-decoration: none;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: inherit;
+}
+.divider12 {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--shade-300);
+  filter: blur(2px);
+  height: 1px;
+  flex-shrink: 0;
+}
+.my-ticket2 {
+  text-decoration: none;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+}
+.my-ticket2,
+.my-ticket3,
+.status2 {
+  display: flex;
+  flex-direction: row;
+}
+.status2 {
+  border: 0;
+  padding: var(--padding-3xs) var(--padding-5xl);
+  background-color: var(--sweet-red);
+  border-radius: var(--br-9xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.my-ticket3 {
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+}
+.all-ticket {
+  position: absolute;
+  top: 330px;
+  left: 111px;
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.company4 {
+  position: relative;
+  font-weight: 500;
+}
+.home64 {
+  flex-direction: row;
+}
+.content17,
+.footers-description4,
+.home64 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.content17 {
+  flex-direction: column;
+  gap: var(--gap-lg);
+  font-size: var(--other-roboto-bold-16-size);
+}
+.footers-description4 {
+  position: absolute;
+  top: 40px;
+  left: 320px;
+  flex-direction: row;
+  gap: var(--gap-77xl);
+}
+.instagram-icon4 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.follow-social-media-parent2,
+.instagram-parent2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.follow-social-media-parent2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  gap: var(--gap-5xl);
+}
+.social-media-and-download-apps4 {
+  position: absolute;
+  top: 40px;
+  left: 1008px;
+  width: 161px;
+  height: 69px;
+  text-align: left;
+}
+.divider16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--shade-300);
+  width: 1440px;
+  height: 1px;
+}
+.footer4,
+.group-icon4 {
+  position: absolute;
+  overflow: hidden;
+}
+.group-icon4 {
+  height: 33.33%;
+  width: 11.6%;
+  top: 9.72%;
+  right: 84.58%;
+  bottom: 56.94%;
+  left: 3.82%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.footer4 {
+  top: 1691px;
+  left: 14px;
+  background-color: var(--white);
+  width: 1440px;
+  height: 360px;
+  text-align: center;
+  font-size: var(--body-body-large-size);
+}
+.word-only-icon4 {
+  position: relative;
+  width: 110px;
+  height: 81px;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.home77 {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: inherit;
+}
+.button89 {
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+}
+.ellipse-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+}
+.m3 {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  line-height: 18px;
+  font-weight: 500;
+}
+.profile-picture3 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  color: var(--white);
+  font-family: var(--font-poppins);
+}
+.after-login-notif-on3,
+.homepage-link3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.homepage-link3 {
+  justify-content: flex-end;
+  gap: var(--gap-29xl);
+}
+.after-login-notif-on3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  width: 1440px;
+  padding: var(--padding-5xs) var(--padding-53xl);
+  box-sizing: border-box;
+  justify-content: space-between;
+  text-align: center;
+  font-size: var(--body-body-large-size);
+}
+.my-ticket-transaction-list {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 2003px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--header-header-h3-size);
+  color: var(--shade-900);
+  font-family: var(--header-header-h3);
+}

@@ -1,0 +1,654 @@
+.coming-soon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 32px;
+  font-weight: 500;
+}
+.picture-icon {
+  position: relative;
+  width: 359px;
+  height: 507px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.the-matrix-resurrections {
+  align-self: stretch;
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+}
+.coming-soon-movie-description {
+  width: 359px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.coming-soon-film,
+.coming-soon-film1,
+.coming-soon-film2 {
+  position: absolute;
+  top: 93px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-34xl);
+}
+.coming-soon-film1,
+.coming-soon-film2 {
+  left: 440px;
+}
+.coming-soon-film2 {
+  left: 880px;
+}
+.view-all {
+  text-decoration: none;
+  position: absolute;
+  top: 11px;
+  left: 1127px;
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--sky-blue);
+  text-align: right;
+  display: inline-block;
+  width: 170px;
+  height: 22px;
+}
+.coming-soon-parent {
+  position: absolute;
+  top: 1350px;
+  left: 72px;
+  width: 1297px;
+  height: 717px;
+  text-align: left;
+  font-size: var(--header-header-h3-size);
+}
+.spiderman-no-way-home-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 707px;
+  object-fit: cover;
+}
+.spider-man-no-way {
+  position: relative;
+  display: inline-block;
+  width: 509.58px;
+  transform: rotate(0.51deg);
+  transform-origin: 0 0;
+}
+.xxi {
+  position: relative;
+}
+.badge1,
+.badge2,
+.badge3 {
+  border-radius: var(--br-9xs);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-7xs) var(--padding-5xs);
+  align-items: center;
+  justify-content: center;
+}
+.badge1 {
+  background: linear-gradient(90deg, #f2c46f, #c6943f);
+}
+.badge2,
+.badge3 {
+  background-color: var(--cinema-color-cgv-red);
+}
+.badge3 {
+  background-color: var(--cinema-color-cinepolis);
+}
+.badge,
+.title-and-badge {
+  justify-content: flex-start;
+}
+.badge {
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-lg);
+  font-size: var(--header-header-h6-size);
+  color: var(--white);
+}
+.title-and-badge {
+  position: absolute;
+  top: 759px;
+  left: -5px;
+  height: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-5xl);
+}
+.spiderman-no-way-home {
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 851px;
+  cursor: pointer;
+  color: inherit;
+}
+.yowis-ben-finale1 {
+  position: relative;
+  display: inline-block;
+  width: 436px;
+}
+.title-and-badge1 {
+  position: absolute;
+  top: 759px;
+  left: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.yowis-ben-finale {
+  position: absolute;
+  top: 0;
+  left: 580px;
+  width: 500px;
+  height: 851px;
+}
+.badge8 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+  font-size: var(--header-header-h6-size);
+  color: var(--white);
+}
+.ghostbusters-afterlife {
+  position: absolute;
+  top: 0;
+  left: 1160px;
+  width: 500px;
+  height: 851px;
+}
+.badge15 {
+  border: 0;
+  display: flex;
+  font-family: var(--header-header-h3);
+  font-size: var(--header-header-h6-size);
+  background-color: var(--cinema-color-cinepolis);
+  border-radius: var(--br-9xs);
+  flex-direction: row;
+  padding: var(--padding-7xs) var(--padding-5xs);
+  align-items: center;
+  justify-content: center;
+}
+.house-of-gucci {
+  position: absolute;
+  top: 0;
+  left: 1740px;
+  width: 500px;
+  height: 851px;
+}
+.badge19 {
+  border: 0;
+  background-color: var(--cinema-color-cinepolis);
+  display: flex;
+  font-family: var(--header-header-h3);
+  font-size: var(--header-header-h6-size);
+  border-radius: var(--br-9xs);
+  flex-direction: row;
+  padding: var(--padding-7xs) var(--padding-5xs);
+  align-items: center;
+  justify-content: center;
+}
+.b,
+.number {
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+.number {
+  top: 32px;
+  left: 436px;
+  border-radius: 30px;
+  background-color: var(--shade-900);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  opacity: 0.9;
+  font-size: var(--other-roboto-bold-16-size);
+  color: var(--white);
+}
+.movie-and-badge-frame,
+.spiderman-no-way-home1 {
+  position: absolute;
+  top: 0;
+  left: 2320px;
+  width: 500px;
+  height: 851px;
+}
+.movie-and-badge-frame {
+  left: 111px;
+  width: 1078px;
+  height: 856px;
+  overflow: hidden;
+}
+.click-button-icon,
+.movie-selection {
+  position: relative;
+  top: 379px;
+  left: -15px;
+  width: 1330px;
+}
+.movie-selection {
+  top: 160px;
+  left: 70px;
+  width: 1300px;
+  font-size: var(--header-header-h2-size);
+}
+.homepage-child {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.company {
+  position: relative;
+  font-weight: 500;
+}
+.button {
+  position: relative;
+  line-height: 24px;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.content {
+  flex-direction: column;
+  gap: var(--gap-lg);
+  font-size: var(--other-roboto-bold-16-size);
+}
+.content,
+.footer-content,
+.footers-description,
+.home7 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer-content {
+  flex-direction: column;
+  gap: var(--gap-5xl);
+}
+.footers-description,
+.home7 {
+  flex-direction: row;
+}
+.home7 {
+  border: 0;
+  background-color: transparent;
+}
+.footers-description {
+  position: absolute;
+  top: 40px;
+  left: 320px;
+  gap: var(--gap-77xl);
+}
+.instagram-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.follow-social-media-parent,
+.instagram-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.follow-social-media-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  gap: var(--gap-5xl);
+}
+.social-media-and-download-apps {
+  position: absolute;
+  top: 40px;
+  left: 1008px;
+  width: 161px;
+  height: 69px;
+  text-align: left;
+}
+.divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--shade-300);
+  width: 1440px;
+  height: 1px;
+}
+.footer,
+.group-icon {
+  position: absolute;
+  overflow: hidden;
+}
+.group-icon {
+  height: 33.33%;
+  width: 11.6%;
+  top: 9.72%;
+  right: 84.58%;
+  bottom: 56.94%;
+  left: 3.82%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.footer {
+  top: 2100px;
+  left: 0;
+  background-color: var(--white);
+  width: 1440px;
+  height: 360px;
+}
+.food-and-beverage,
+.view-all1 {
+  position: relative;
+  top: 0;
+  left: 1px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.view-all1 {
+  text-decoration: none;
+  top: 7px;
+  left: 1128px;
+  color: var(--sky-blue);
+  text-align: right;
+  display: inline-block;
+  width: 170px;
+  height: 22px;
+}
+.tix-id-news {
+  position: relative;
+  width: 419px;
+  height: 237px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.news-tag {
+  border: 1px solid var(--shade-800);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-5xs) var(--padding-xs);
+  align-items: center;
+  justify-content: center;
+}
+.nov-2021 {
+  position: relative;
+  font-size: var(--other-roboto-bold-16-size);
+  line-height: 24px;
+  color: var(--shade-600);
+}
+.title-article-and-date {
+  align-self: stretch;
+  gap: var(--gap-lg);
+  font-size: var(--header-header-h3-size);
+}
+.title-and-tag,
+.title-article-and-date,
+.tix-id-news-card,
+.tix-id-news-card1,
+.tix-id-news-card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.title-and-tag {
+  width: 355px;
+  gap: var(--gap-sm);
+}
+.tix-id-news-card,
+.tix-id-news-card1,
+.tix-id-news-card2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  gap: var(--gap-21xl);
+}
+.tix-id-news-card1,
+.tix-id-news-card2 {
+  left: 439px;
+}
+.tix-id-news-card2 {
+  left: 878px;
+}
+.image-14-icon,
+.image-17-icon {
+  position: relative;
+  /*top: 27px;*/
+  /*left: 1037px;*/
+  width: 102px;
+  height: 183px;
+  object-fit: cover;
+}
+.image-14-icon {
+  top: 0;
+  left: 113px;
+  width: 130px;
+  height: 177px;
+}
+.tix-id-news-card-parent {
+  text-decoration: none;
+  position: absolute;
+  top: 112px;
+  left: 0;
+  width: 1297px;
+  height: 395px;
+  font-size: var(--header-header-h6-size);
+  color: inherit;
+}
+.image-15-icon {
+  position: absolute;
+  top: 112px;
+  left: 542px;
+  width: 213px;
+  height: 237px;
+  object-fit: cover;
+}
+.food-and-beverage-parent {
+  position: relative;
+  top: 200px;
+  left: 71px;
+  width: 1298px;
+  height: 507px;
+  text-align: left;
+  font-size: var(--header-header-h3-size);
+}
+.homepage-item {
+  position: absolute;
+  top: 160px;
+  left: 181px;
+  border-radius: 20px;
+  background-color: var(--purple);
+  width: 194px;
+  height: 35px;
+}
+.advance-ticket-sales {
+  position: absolute;
+  top: 175px;
+  left: 165px;
+  font-weight: 500;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 223px;
+  height: 6px;
+}
+.word-only-icon {
+  position: relative;
+  width: 110px;
+  height: 81px;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button11,
+.home13 {
+  text-decoration: none;
+  color: inherit;
+}
+.home13 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button11 {
+  position: relative;
+  font-weight: 500;
+}
+.frame-child {
+  position: relative;
+  background-color: var(--shade-400);
+  width: 2px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.button14,
+.register {
+  position: relative;
+  font-weight: 500;
+}
+.register {
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.button14 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24.07px;
+}
+.button13,
+.home-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button13 {
+  text-decoration: none;
+  border-radius: 5.07px;
+  background-color: var(--color-blue);
+  width: 101px;
+  height: 48px;
+  flex-shrink: 0;
+  padding: var(--padding-xs) var(--padding-5xs);
+  box-sizing: border-box;
+  justify-content: center;
+  color: var(--pastel-yellow);
+}
+.home-parent {
+  justify-content: flex-end;
+  gap: var(--gap-29xl);
+}
+.before-login,
+.homepage {
+  background-color: var(--white);
+}
+.before-login {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 1440px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-5xs) var(--padding-53xl);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 3020px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--body-body-large-size);
+  color: var(--shade-900);
+  font-family: var(--header-header-h3);
+}
+
+.carousel {
+    position: relative;
+}
+.carousel2 {
+    position: relative;
+    top: 70px;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-item {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.carousel-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url('https://img.icons8.com/ios/50/ffffff/chevron-left.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel-control-next-icon {
+    background-image: url('https://img.icons8.com/ios/50/ffffff/chevron-right.png');
+}

@@ -1,0 +1,6 @@
+.word-only {
+  position: relative;
+  width: 100%;
+  height: 81px;
+  overflow: hidden;
+}
