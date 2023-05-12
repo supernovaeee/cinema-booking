@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
@@ -17,6 +18,7 @@ class registerController extends Controller
         else {
             $temp = new \App\Models\users;
             $temp->role =$r->role;
+            $temp->status=0;
 //            $temp->id_location = $r->id_location;
             $temp->name = $r->name;
             $temp->username = $r->username;

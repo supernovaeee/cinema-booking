@@ -1,13 +1,16 @@
 <?php
 namespace App\Http\Controllers;
-use App\Models\users;use Illuminate\Http\Request;
+use App\Models\users;
+use Illuminate\Http\Request;
 use App\User;use DataTables;
 class UserControllers extends Controller
 {    public function read(){
-        $users=users::all()->where('status', '<', 2);;        return view('sysAdmin.read')->with('users',$users);
+        $users=users::all()->where('status', '<', 2);        
+        return view('sysAdmin.read')->with('users',$users);
     }    public function createPage(){
         return view('sysAdmin.create');    }
-    public function deleted(){        $users=users::all()->where('status', '=', 2);
+    public function deleted(){        
+        $users=users::all()->where('status', '=', 2);
         return view('sysAdmin.deleted')->with('users',$users);    }
     public function updatePage($id){        $users = users::findOrFail($id);
         return view('sysAdmin.update', ['users' => $users]);    }
@@ -21,9 +24,12 @@ class UserControllers extends Controller
     /**     * Store a newly created resource in storage.
      */    public function store(Request $request)
     {        $users = new users();
-        $users->name = $request->name;        $users->email = $request->email;
-        $users->username = $request->username;        $users->password = $request->password;
-        $users->role = $request->role;        $users->status = $request->status;
+        $users->name = $request->name;        
+        $users->email = $request->email;
+        $users->username = $request->username;        
+        $users->password = $request->password;
+        $users->role = $request->role;        
+        $users->status = $request->status;
         $users->save();        return redirect ('admin-dashboard')->with('flash_message','User Added!');
     }
     /**     * Display the specified resource.

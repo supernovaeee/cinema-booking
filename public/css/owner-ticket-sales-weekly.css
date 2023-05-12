@@ -57,7 +57,6 @@
   line-height: 32px;
   font-weight: 500;
   font-family: var(--font-roboto);
-  color: var(--color-whitesmoke-200);
   text-align: center;
 }
 .button32 {
@@ -65,6 +64,8 @@
   position: absolute;
   left: 0;
   height: 40px;
+  color: var(--color-mediumslateblue-100);
+
 }
 .button32,
 .button34,
@@ -80,17 +81,22 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  
 }
 .button34 {
   background-color: var(--color-plum);
   position: absolute;
   left: 144px;
   height: 40px;
+  color: var(--color-mediumslateblue-100);
+
 }
 .button36 {
   cursor: pointer;
   background-color: var(--color-mediumslateblue-100);
   left: 288px;
+  color: var(--color-whitesmoke-200);
+  
 }
 .button-parent1,
 .button36,
@@ -112,6 +118,8 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  color: var(--color-mediumslateblue-100);
+
 }
 .button-parent1 {
   top: 75px;

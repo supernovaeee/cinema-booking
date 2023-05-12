@@ -67,16 +67,16 @@
       </div>
       <div class="button-group">
           <a class="button8" href="fnbHour">
-              <div class="button17">Hourly</div>
+              <div class="button9">Hourly</div>
           </a>
           <a class="button10" href="fnbDaily">
-              <div class="button17">Daily</div>
+              <div class="button9">Daily</div>
           </a>
           <a class="button12" href="fnbWeek">
-              <div class="button17">Weekly</div>
+              <div class="button9">Weekly</div>
           </a>
           <a class="button14" href="fnbMonth">
-              <div class="button17">Monthly</div>
+              <div class="button9">Monthly</div>
           </a>
       </div>
     </div>

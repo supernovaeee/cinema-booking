@@ -19,19 +19,19 @@ use App\Http\Controllers\UserControllers;
 //     return view('welcome');
 // });
 
-Route::get('fnbDaily',[Owner::class, 'fnbDaily']);
+Route::get('fnbDaily',[Owner::class, 'fnbDaily'])->name('fnbDaily');
 //cinema-owner
 // Route::get('fnbDaily',[Owner::class, 'fnbDaily']);
-Route::get('fnbMonth',[Owner::class, 'fnbMonth']);
-Route::get('fnbWeek',[Owner::class, 'fnbWeek']);
-Route::get('fnbHour',[Owner::class, 'fnbHour']);
+Route::get('fnbMonth',[Owner::class, 'fnbMonth'])->name('fnbMonth');
+Route::get('fnbWeek',[Owner::class, 'fnbWeek'])->name('fnbWeek');
+Route::get('fnbHour',[Owner::class, 'fnbHour'])->name('fnbHour');
 
-Route::get('ticketDaily',[Owner::class, 'ticketDaily']);
-Route::get('ticketMonth',[Owner::class, 'ticketMonth']);
-Route::get('ticketWeek',[Owner::class, 'ticketWeek']);
-Route::get('ticketHour',[Owner::class, 'ticketHour']);
+Route::get('ticketDaily',[Owner::class, 'ticketDaily'])->name('ticketDaily');
+Route::get('ticketMonth',[Owner::class, 'ticketMonth'])->name('ticketMonth');
+Route::get('ticketWeek',[Owner::class, 'ticketWeek'])->name('ticketWeek');
+Route::get('ticketHour',[Owner::class, 'ticketHour'])->name('ticketHour');
 
-Route::get('trends',[Owner::class, 'trends']);
+Route::get('trends',[Owner::class, 'trends'])->name('trends');
 
 //website
 Route::get('index',[App\Http\Controllers\Customer\viewMovies::class, 'home'])->name('index');

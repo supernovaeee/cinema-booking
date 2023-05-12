@@ -68,16 +68,16 @@
 
       <div class="button-parent5">
           <a class="button64" href="ticketHour">
-              <div class="button17">Hourly</div>
+              <div class="button65">Hourly</div>
           </a>
           <a class="button66" href="ticketDaily">
-              <div class="button17">Daily</div>
+              <div class="button65">Daily</div>
           </a>
           <a class="button68" href="ticketWeek">
-              <div class="button17">Weekly</div>
+              <div class="button65">Weekly</div>
           </a>
           <a class="button70" href="ticketMonth">
-              <div class="button17">Monthly</div>
+              <div class="button65">Monthly</div>
           </a>
       </div>
     </div>

@@ -32,16 +32,16 @@
 
       <div class="group-div">
           <a class="button24" href="ticketHour">
-              <div class="button17">Hourly</div>
+              <div class="button25">Hourly</div>
           </a>
           <a class="button26" href="ticketDaily">
-              <div class="button17">Daily</div>
+              <div class="button25">Daily</div>
           </a>
           <a class="button28" href="ticketWeek">
-              <div class="button17">Weekly</div>
+              <div class="button25">Weekly</div>
           </a>
           <a class="button30" href="ticketMonth">
-              <div class="button17">Monthly</div>
+              <div class="button25">Monthly</div>
           </a>
       </div>
       <div class="frame-parent1">

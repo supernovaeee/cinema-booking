@@ -142,7 +142,6 @@
   line-height: 32px;
   font-weight: 500;
   font-family: var(--font-roboto);
-  color: var(--color-whitesmoke-200);
   text-align: center;
 }
 .button56,
@@ -161,14 +160,16 @@
   justify-content: center;
 }
 .button56 {
-  cursor: pointer;
   background-color: var(--color-mediumslateblue-100);
   position: absolute;
   left: 0;
   height: 40px;
+  color: var(--color-whitesmoke-200);
+
 }
 .button58,
 .button60 {
+  color: var(--color-mediumslateblue-100);
   background-color: var(--color-plum);
 }
 .button58 {
@@ -201,6 +202,8 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  color: var(--color-mediumslateblue-100);
+
 }
 .button-parent4 {
   top: 75px;

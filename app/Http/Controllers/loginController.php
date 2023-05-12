@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class loginController extends Controller
@@ -45,6 +45,10 @@ class loginController extends Controller
 //            dd(Auth::check());
             return redirect()->route('index');
         }
+        else if(Auth::attempt($owner)){
+            //            dd(Auth::check());
+                        return redirect()->route('ticketDaily');
+                    }
         else {
             return redirect()->back()->withErrors(['wrong']);
         }

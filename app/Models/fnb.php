@@ -13,4 +13,9 @@ class fnb extends Model
     protected $guarded = ['id_fnb'];
     public $timestamps = false;
 
+    public function order_detail()
+    {
+        return $this->belongsTo(order_detail::class, 'id_order_detail', 'id_order_detail');
+    }
+ 
 }

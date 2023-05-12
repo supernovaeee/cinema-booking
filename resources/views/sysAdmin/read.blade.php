@@ -34,8 +34,8 @@
                 src="{{ asset('css/public/vuesaxlinearlogout1.svg') }}"
             />
             <div class="logout">Logout</div>
-        </div></a
-    >
+        </div>
+    </a>
     <div class="frame-parent">
         <div class="vuesaxlinearcategory-parent">
             <img
@@ -96,7 +96,7 @@
                             <a href="admin-delete/{{$a->id}}"  class="btn btn-danger m1 btn-hapus">Delete</a>
                         </td>
                     </tr>
-                    @endforeach
+                    @endforeach 
                     </tbody>
                 </table>
             </div>
