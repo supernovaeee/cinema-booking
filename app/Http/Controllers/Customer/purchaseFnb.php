@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Customer;
 use App\Http\Controllers\Controller;
 use App\Models\fnb;
 use App\Models\orders;
-use App\Models\orders_detail;
+use App\Models\order_detail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 Use Cart;
@@ -36,7 +36,7 @@ class purchaseFnb extends Controller
             $order->save();
             $cart=Cart::content();
             foreach($cart as $i) {
-                $order_detail = new orders_detail();
+                $order_detail = new order_detail();
                 $order_detail->id_order = orders::pluck('id_order')->last();
                 $name=$i->name;
                 $id_fnb=intval(fnb::where('fnb_name',$name)->value('id_fnb'));

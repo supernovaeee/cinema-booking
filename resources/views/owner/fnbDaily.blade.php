@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
       <link rel="stylesheet" type="text/css" href="{{url('css/global.css')}}"/>
       <link rel="stylesheet" type="text/css" href="{{url('css/owner-fn-b-daily.css')}}"/>
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
@@ -13,7 +13,7 @@
     <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
     <script src="//cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="//cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script> -->
+    <script src="//cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
@@ -39,33 +39,8 @@
         </a>
         <img class="group-icon2" alt="" src="{{ asset('css/public2/group1.svg') }}" />
         <div class="frame-container" data-scroll-to="groupContainer">
-<!-- 
-        <h1 class="active-users-wrapper">
-              <div class="box_table">
-                  <table id="myTable" class="table table-striped table-bordered">
-                  <thead>
-                      <tr>
-                          <th>Order Detail ID</th>
-                          <th>Order ID</th>
-                          <th>ID FnB</th>
-                          <th>Qty</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      @foreach($orders as $a)
-                      <tr>
-                          <td>{{$a->id_order_detail}}</td>
-                          <td>{{$a->id_order}}</td>
-                          <td>{{$a->id_fnb}}</td>
-                          <td>{{$a->qty}}</td>
-                      </tr>
-                      @endforeach
-                      </tbody>
-                  </table>
-              </div>
 
-        </h1> -->
-
+        
         <a
           class="icon-short-text-container"
           href="ticketHour"
@@ -115,6 +90,62 @@
           </a>
       </div>
 
+<!-- <h1 class="active-users-wrapper"> -->
+<form style="margin-left: 15%; margin-top: 10%" action="{{ route('fnbDaily') }}" method="GET">
+          <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
+          <button type="submit">Search</button>
+      <br><br>
+      </form>
+
+
+      <div class="box_table">
+
+                  <table id="myTable" class="table table-striped table-bordered" style="width: 70%; margin-left: 15%;  margin-top: 5%;">
+                  <thead>
+                      <tr>
+                          <th style="width: 30%;">
+                              <a href="{{ route('fnbDaily', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
+                              <a href="{{ route('fnbDaily', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
+                          </th>
+                          <th>
+                              <a href="{{ route('fnbDaily', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('fnbDaily', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                          </th>
+                          <th>Food / Beverage</th>
+                          <th>Qty</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      @php
+                          $previousDate = null;
+                          $previousTotalPrice = null;
+                      @endphp
+                      @foreach($orders as $order)
+                      <tr>
+                          <td>
+                              @if ($order->date !== $previousDate)
+                                  {{ $order->date }}
+                              @endif
+                          </td>
+                          <td>
+                              @if ($order->date !== $previousDate || $order->total_price !== $previousTotalPrice)
+                                  {{ $order->total_price }}
+                              @endif
+                          </td>
+                          <td>{{ $order->fnb_name }}</td>
+                          <td>{{ $order->total_qty }}</td>
+                      </tr>
+                      @php
+                          $previousDate = $order->date;
+                          $previousTotalPrice = $order->total_price;
+                      @endphp
+                      @endforeach
+                  </tbody>
+
+                  </table>
+</div>
+
+        <!-- </h1> -->
 
         
     <!-- <div class="frame-div">

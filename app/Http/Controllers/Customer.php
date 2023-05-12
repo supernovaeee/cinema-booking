@@ -11,7 +11,7 @@ use App\Models\fnb;
 use App\Models\movies;
 use App\Models\studio_movies;
 use App\Models\orders;
-use App\Models\orders_detail;
+use App\Models\order_detail;
 use App\Models\tickets;
 use App\Models\users;
 use Carbon\Carbon;
