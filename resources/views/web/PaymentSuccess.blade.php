@@ -5,14 +5,25 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css" href="{{url('css/global.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{url('css/PaymentSuccess.css')}}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-    />
+      <link rel="stylesheet" type="text/css" href="{{url('css/home.css')}}" />
+
+      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+      <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+      <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+      <script src="//cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+      <script src="//cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+      <script src="//cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+      <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      />
+      <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      />
   </head>
   <body>
     <div class="payment-success">
@@ -37,26 +48,44 @@
           id="wordOnly"
         />
 
-        <div class="homepage-link4">
-          <a class="home93" href="{{route('index')}}">
-            <div class="company5">Home</div>
-          </a>
-          <a class="home93" href="{{route('MyTicketTransactionList')}}">
-            <div class="button104" id="buttonText11">My Tickets</div>
-          </a>
-          <a class="home93" href="{{route('products.index')}}">
-            <div class="button104" id="buttonText12">Food and Beverage</div>
-          </a>
-          <div class="profile-picture4">
-            <img
-              class="profile-picture-child1"
-              alt=""
-              src="{{ asset('css/public-cust/tix-id-11@2x.png') }}"
-            />
+          <div class="before-login">
+              <img
+                  class="word-only-icon"
+                  alt=""
+                  src="{{ asset('css/public-cust/word-only.svg') }}"
+                  id="wordOnly"
+              />
 
-            <div class="m4">M</div>
+              <div class="home-parent">
+                  <a class="home13" href="{{route('index')}}">
+                      <a href="{{route('index')}}" class="company">Home</a>
+                  </a>
+                  <a class="home13" href="{{route('MyTicketTransactionList')}}">
+                      <a class="button11" href="{{route('MyTicketTransactionList')}}"
+                      >My Tickets</a
+                      >
+                  </a>
+                  <a class="home13" href="{{route('products.index')}}">
+                      <a class="button11" href="{{route('products.index')}}"
+                      >Food and Beverage</a
+                      >
+                  </a>
+                  @if(Auth::check())
+                  <p>{{Auth::user()->name}}</p>
+                  <a class="button13" href="{{route('logout')}}">
+                      <div class="button14">Logout</div>
+                  </a>
+                  @else
+                  <div class="frame-child"></div>
+                  <a class="register" href="{{route('signup')}}" id="register"
+                  >Register</a
+                  >
+                  <a class="button13" href="{{route('login')}}">
+                      <div class="button14">Login</div>
+                  </a>
+                  @endif
+              </div>
           </div>
-        </div>
       </div>
     </div>
 

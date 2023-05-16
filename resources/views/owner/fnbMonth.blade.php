@@ -42,7 +42,7 @@
       <div class="frame-parent">
         <a
           class="icon-short-text-parent"
-          href="ticketHour.html"
+          href="ticketMonth"
           id="frameLink1"
         >
           <img

@@ -56,7 +56,7 @@
         </a>
         <a
           class="icon-burger-parent1"
-          href="fnbHour"
+          href="fnbMonth"
           id="frameLink2"
         >
           <img class="icon-burger3" alt="" src="{{ asset('css/public2/-icon-burger1.svg') }}" />

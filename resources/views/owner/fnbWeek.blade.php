@@ -42,7 +42,7 @@
       <div class="frame-group">
         <a
           class="icon-short-text-group"
-          href="ticketHour"
+          href="ticketWeek"
           id="frameLink1"
         >
           <img

@@ -6,11 +6,27 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css" href="{{url('css/global.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{url('css/ChoosingSeats.css')}}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" />
+    <link rel="stylesheet" type="text/css" href="{{url('css/home.css')}}" />
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="//cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="//cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+    />
 </head>
 
-<body>
+<body onload="disableSeats()">
     <div class="choosing-seats">
         <b class="choose-seats">CHOOSE SEATS</b>
 
@@ -26,15 +42,28 @@
         </div>
         <form action="{{route('chooseSeats')}}" method="post">
             @csrf
+            <div class="seat-status">
+                <label for="ticket_type">Select ticket type:</label>
+                <select id="ticket_type" name="ticket_type">
+                    @foreach($tickets as $t)
+                    <option value="{{$t->id_ticket_type}}">{{$t->type}}</option>
+                    @endforeach
+                </select>
+            </div>
+            @foreach($tickets as $t)
+            <input type="hidden" value="{{$t->id_ticket_type}}" id="id_ticket_type" />
+            <input type="hidden" value="{{$t->ticket_type}}" id="ticket_name" />
+            <input type="hidden" value="{{$t->price}}" id="ticket_price" />
+            @endforeach
             <input type="hidden" value="{{$id}}" name="studio_movies" />
             <input type="hidden" value="{{$price}}" name="price" id="price" />
             @for($i = 1; $i <= 20; $i++) <label class="label">
-                <input type="checkbox" name="seats[]" value="{{ $i }}" onclick="handleCheckboxClick(this)">
+                <input type="checkbox" name="seats[]" id="dd" value="{{ $i }}" onclick="handleCheckboxClick(this)">
                 <span>{{ $i }}</span>
                 </label>
                 @endfor <br>
                 @for($i = 21; $i <= 120; $i++) <label class="label2">
-                    <input type="checkbox" name="seats[]" value="{{ $i }}" onclick="handleCheckboxClick(this)">
+                    <input type="checkbox" name="seats[]" id="dd" value="{{ $i }}" onclick="handleCheckboxClick(this)">
                     <span>{{ $i }}</span>
                     </label>
                     @if ($i % 20 == 0)
@@ -61,21 +90,6 @@
             <b class="c8-c9-c101" id="result">...</b>
         </div>
 
-
-        <div class="seat-status">
-            <div class="filled">
-                <div class="filled-child"></div>
-                <b class="selected">Selected</b>
-            </div>
-            <div class="filled">
-                <div class="unfilled-child"></div>
-                <b class="selected">Empty</b>
-            </div>
-            <div class="filled">
-                <div class="selected-child"></div>
-                <b class="chosen">Chosen</b>
-            </div>
-        </div>
         <div class="footer7">
             <label for="cardNumber">Card Number</label>
             <div class="input-group">
@@ -94,26 +108,44 @@
             </div>
             </div>
         </div>
-        <div class="after-login-notif-on6">
-            <img class="word-only-icon7" alt="" src="{{ asset('css/public-cust/tix-id-11@2x.png') }}" id="wordOnly" />
+    <div class="before-login">
+        <img
+            class="word-only-icon"
+            alt=""
+            src="{{ asset('css/public-cust/word-only.svg') }}"
+            id="wordOnly"
+        />
 
-            <div class="homepage-link6">
-                <a class="home125" href="{{route('index')}}">
-                    <div class="company7">Home</div>
-                </a>
-                <a class="home125"href="{{route('MyTicketTransactionList')}}">
-                    <div class="button138" id="buttonText13">My Tickets</div>
-                </a>
-                <a class="home125" href="FoodAndBeverage">
-                    <div class="button138" id="buttonText14">Food and Beverage</div>
-                </a>
-                <div class="profile-picture6">
-                    <img class="profile-picture-child3" alt="" src="{{ asset('css/public-cust/tix-id-11@2x.png') }}" />
-
-                    <div class="m6">M</div>
-                </div>
-            </div>
+        <div class="home-parent">
+            <a class="home13" href="{{route('index')}}">
+                <a class="company" href="{{route('index')}}">Home</a>
+            </a>
+            <a class="home13" href="{{route('MyTicketTransactionList')}}">
+                <a class="button11" href="{{route('MyTicketTransactionList')}}"
+                >My Tickets</a
+                >
+            </a>
+            <a class="home13" href="{{route('products.index')}}">
+                <a class="button11" href="{{route('products.index')}}"
+                >Food and Beverage</a
+                >
+            </a>
+            @if(Auth::check())
+            <p>{{Auth::user()->name}}</p>
+            <a class="button13" href="{{route('logout')}}">
+                <div class="button14">Logout</div>
+            </a>
+            @else
+            <div class="frame-child"></div>
+            <a class="register" href="{{route('signup')}}" id="register"
+            >Register</a
+            >
+            <a class="button13" href="{{route('login')}}">
+                <div class="button14">Login</div>
+            </a>
+            @endif
         </div>
+    </div>
     </div>
 
     <script>
@@ -142,7 +174,27 @@
     <script>
         var selectedSeats = [];
 
+        var seats = <?php echo json_encode($sofa); ?>;
+
+        // function disableSeats() {
+        //     var inputs = document.getElementById('dd');
+        //     for (var i = 0; i < inputs.length; i++) {
+        //         if (seats.includes(inputs[i].value)) {
+        //             inputs[i].disabled = true;
+        //         }
+        //     }
+        // }
+
         function handleCheckboxClick(checkbox) {
+            var inputs = document.getElementById('dd');
+            for (var i = 0; i < inputs.length; i++) {
+                if (seats.includes(inputs[i].value)) {
+                    inputs[i].disabled = true;
+                }
+            }
+
+
+
             var seatValue = checkbox.value;
 
             if (checkbox.checked) {
@@ -164,11 +216,21 @@
         }
 
         function updatePriceTotal() {
+            var ticketTypeSelect = document.getElementById("ticket_type");
             var priceTotalDiv = document.getElementById('pricetotal');
-            var price = document.getElementById('price');
-            var totalPrice = selectedSeats.length * price.value;
+            var price = parseFloat(document.getElementById('price').value);
+
+            if (ticketTypeSelect.value == "1") {
+                price = price - 0;
+            } else if (ticketTypeSelect.value == "2") {
+                price = price - 5;
+            } else if (ticketTypeSelect.value == "3") {
+                price = price - 3;
+            }
+            var totalPrice = selectedSeats.length * price;
             priceTotalDiv.innerHTML = "SGD " + totalPrice;
         }
+
     </script>
 
 

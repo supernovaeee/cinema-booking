@@ -8,7 +8,7 @@ use App\Models\orders;
 use App\Models\order_detail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-Use Cart;
+use Cart;
 class purchaseFnb extends Controller
 {
     public function addtoCart(Request $r){

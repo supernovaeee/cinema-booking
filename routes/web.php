@@ -43,7 +43,8 @@ Route::post('chooseSeats',[App\Http\Controllers\Customer\purchaseMovies::class, 
 
 Route::post('ConfirmPayment',[App\Http\Controllers\Customer\purchaseFnb::class, 'payment'])->name('payment');
 
-
+Route::get('reviewForum',[App\Http\Controllers\Customer\showReview::class, 'showReview'])->name('showReview');
+Route::post('reviewForum',[App\Http\Controllers\Customer\makeReview::class, 'makeReview'])->name('submitReview');
 
 Route::get('FoodAndBeverage',[App\Http\Controllers\Customer\showFnb::class, 'food'])->name('products.index');
 

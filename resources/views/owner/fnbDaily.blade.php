@@ -43,7 +43,7 @@
         
         <a
           class="icon-short-text-container"
-          href="ticketHour"
+          href="ticketDaily"
           id="frameLink1"
         >
           <img

@@ -5,31 +5,35 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" type="text/css" href="{{url('css/global.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{url('css/ChoosingSchedule.css')}}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-    />
+      <link rel="stylesheet" type="text/css" href="{{url('css/home.css')}}" />
+      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+      <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+      <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+      <script src="//cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+      <script src="//cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+      <script src="//cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+      <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      />
+      <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      />
   </head>
   <body>
     <div class="choosing-schedule">
       <div class="time-picker-frame">
-        <div class="grand-indonesia">
             @foreach($branch as $br)
-          <div class="location-and-cinemas-badge">
             <div class="badhe-and-title">
               <div class="title2">
                 <img class="title-child" alt="" src="{{ asset('css/public-cust/tix-id-11@2x.png') }}" />
                 <div class="grand-indonesia-cgv6">{{$br->branch_name}}</div>
               </div>
-              <div class="badge20">
-                <b class="cgv5">Cathay</b>
-              </div>
             </div>
-          </div>
             @foreach($branch_studio as $bs)
             @if($bs->id_branch == $br->id_branch)
             <div class="all-schedule">
@@ -52,7 +56,6 @@
             @endforeach
             @endforeach
         </div>
-      </div>
 
       </div>
       <b class="schedule">Schedule</b>
@@ -79,126 +82,46 @@
       </div>
     @endforeach
 
-<!--        Footer-->
-      <div class="divider26"></div>
-      <div class="footer8">
-        <div class="footers-description8">
-          <div class="grand-indonesia">
-            <div class="oct5">Company</div>
-            <div class="content29">
-              <div class="home128">
-                <div class="duration">Contact Us</div>
-              </div>
-              <div class="home128">
-                <div class="duration">About Us</div>
-              </div>
-              <div class="home128">
-                <div class="duration">Partnering</div>
-              </div>
-            </div>
-          </div>
-          <div class="grand-indonesia">
-            <div class="oct5">Services</div>
-            <div class="content29">
-              <div class="home128">
-                <div class="duration">Theaters</div>
-              </div>
-              <div class="home128">
-                <div class="duration">My Tickets</div>
-              </div>
-              <div class="home128">
-                <div class="duration">Food and Beverage</div>
-              </div>
-              <div class="home128">
-                <div class="duration">Payments</div>
-              </div>
-              <div class="home128">
-                <div class="duration"></div>
-              </div>
-            </div>
-          </div>
-          <div class="grand-indonesia">
-            <div class="oct5">Help</div>
-            <div class="content29">
-              <div class="home128">
-                <div class="duration">Terms and Condition</div>
-              </div>
-              <div class="home128">
-                <div class="duration">FAQ</div>
-              </div>
-              <div class="home128">
-                <div class="duration">CSR</div>
-              </div>
-              <div class="home128">
-                <div class="duration"></div>
-              </div>
-              <div class="home128">
-                <div class="duration"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="social-media-and-download-apps8">
-          <div class="follow-social-media-parent6">
-            <div class="oct5">Follow Social Media</div>
-            <div class="instagram-parent6">
-              <img
-                class="instagram-icon8"
-                alt=""
-                src="{{ asset('css/public-cust/tix-id-11@2x.png') }}"
-              />
-
-              <img
-                class="instagram-icon8"
-                alt=""
-                src="{{ asset('css/public-cust/tix-id-11@2x.png') }}"
-              />
-
-              <img
-                class="instagram-icon8"
-                alt=""
-                src="{{ asset('css/public-cust/tix-id-11@2x.png') }}"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="divider27"></div>
-        <img class="group-icon8" alt="" src="{{ asset('css/public-cust/tix-id-11@2x.png') }}" />
-      </div>
-      <div class="after-login-notif-on7">
+<!--        Header-->
+    <div class="before-login">
         <img
-          class="word-only-icon8"
-          alt=""
-          src="{{ asset('css/public-cust/tix-id-11@2x.png') }}"
-          id="wordOnly"
+            class="word-only-icon"
+            alt=""
+            src="{{ asset('css/public-cust/word-only.svg') }}"
+            id="wordOnly"
         />
 
-        <div class="homepage-link7">
-          <a class="home141" href="{{route('index')}}">
-            <a class="button155" href="{{route('index')}}">Home</a>
-          </a>
-          <a class="home141" href="{{route('MyTicketTransactionList')}}">
-            <a
-              class="button156"
-              href="{{route('MyTicketTransactionList')}}"
-              id="button2"
-              >My Tickets</a
+        <div class="home-parent">
+            <a class="home13" href="{{route('index')}}">
+                <a class="company" href="{{route('index')}}">Home</a>
+            </a>
+            <a class="home13" href="{{route('MyTicketTransactionList')}}">
+                <a class="button11" href="{{route('MyTicketTransactionList')}}"
+                >My Tickets</a
+                >
+            </a>
+            <a class="home13" href="{{route('products.index')}}">
+                <a class="button11" href="{{route('products.index')}}"
+                >Food and Beverage</a
+                >
+            </a>
+            @if(Auth::check())
+            <p>{{Auth::user()->name}}</p>
+            <a class="button13" href="{{route('logout')}}">
+                <div class="button14">Logout</div>
+            </a>
+            @else
+            <div class="frame-child"></div>
+            <a class="register" href="{{route('signup')}}" id="register"
+            >Register</a
             >
-          </a>
-          <a class="home141" href="http://127.0.0.1:8000/FoodAndBeverage">
-            <div class="button157" id="buttonText13">Food and Beverage</div>
-          </a>
-          <div class="profile-picture7">
-            <img
-              class="profile-picture-child4"
-              alt=""
-              src="{{ asset('css/public-cust/tix-id-11@2x.png') }}"
-            />
-
-            <div class="m7">M</div>
-          </div>
+            <a class="button13" href="{{route('login')}}">
+                <div class="button14">Login</div>
+            </a>
+            @endif
         </div>
-      </div>
+    </div>
+
     </div>
 
     <script>

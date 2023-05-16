@@ -9,6 +9,7 @@ use App\Models\movies;
 use App\Models\order_movies;
 use App\Models\orders;
 use App\Models\studio_movies;
+use App\Models\tickets;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -55,6 +56,7 @@ class purchaseMovies extends Controller
             $order_movies->id_order = orders::pluck('id_order')->last();
             $order_movies->id_studio_movies = studio_movies::where('id_studio_movies',$r->studio_movies)->pluck('id_studio_movies')->first();
             $order_movies->qty = count($r->seats);
+            $order_movies->ticket_type=$r->ticket_type;
             $order_movies->seats = implode(" ",$r->seats);
             $order_movies->status=0;
             $order_movies->save();
@@ -81,7 +83,9 @@ class purchaseMovies extends Controller
             ->where('studio_movies.id_studio_movies',$id)
             ->pluck('studio.price')
             ->first();
-
-        return view('web.ChoosingSeats',['id'=> $id, 'price' =>$price]);
+        $tickets=tickets::where('status',0)->get();
+        $sofa = order_movies::where('id_studio_movies', $id)->pluck('seats');
+        $sofa_array = explode(" ", $sofa);
+        return view('web.ChoosingSeats',['id'=> $id, 'price' =>$price,'tickets' =>$tickets,'sofa' => $sofa_array]);
     }
 }

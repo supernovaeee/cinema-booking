@@ -56,7 +56,7 @@
         </a>
         <a
           class="icon-burger-parent3"
-          href="./owner-fn-b-hour.html"
+          href="fnbDaily"
           id="frameLink2"
         >
           <img class="icon-burger5" alt="" src="{{ asset('css/public2/-icon-burger1.svg') }}" />

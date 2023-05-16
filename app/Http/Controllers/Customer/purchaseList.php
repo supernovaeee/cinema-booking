@@ -19,7 +19,8 @@ class purchaseList extends Controller
                 ->join('movies', 'movies.id_movies', '=', 'studio_movies.id_movies')
                 ->join('branch_studio', 'branch_studio.id_branch_studio', '=', 'studio_movies.id_branch_studio')
                 ->join('branch', 'branch.id_branch', '=', 'branch_studio.id_branch')
-                ->join('studio', 'studio.id_studio', '=', 'branch_studio.id_studio')->get();
+                ->join('studio', 'studio.id_studio', '=', 'branch_studio.id_studio')
+                ->join('tickets','tickets.id_ticket_type','=','order_movies.ticket_type')->get();
             $food = orders::join('order_detail', 'orders.id_order', '=', 'order_detail.id_order')
                 ->join('fnb', 'fnb.id_fnb', '=', 'order_detail.id_fnb')->get();
             return view('web.MyTicketTransactionList', ['movies' => $movies, 'food' => $food]);

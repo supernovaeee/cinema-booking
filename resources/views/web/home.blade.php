@@ -13,12 +13,54 @@
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
     />
+
 </head>
 <body>
 
 <div class="homepage">
+    <div class="before-login">
+        <img
+            class="word-only-icon"
+            alt=""
+            src="{{ asset('css/public-cust/word-only.svg') }}"
+            id="wordOnly"
+        />
+
+        <div class="home-parent">
+            <a class="home13" href="{{route('index')}}">
+                <a class="company" href="{{route('index')}}">Home</a>
+            </a>
+            <a class="home13" href="{{route('MyTicketTransactionList')}}">
+                <a class="button11" href="{{route('MyTicketTransactionList')}}"
+                >My Tickets</a
+                >
+            </a>
+            <a class="home13" href="{{route('products.index')}}">
+                <a class="button11" href="{{route('products.index')}}"
+                >Food and Beverage</a
+                >
+            </a>
+            @if(Auth::check())
+            <p>{{Auth::user()->name}}</p>
+            <a class="button13" href="{{route('logout')}}">
+                <div class="button14">Logout</div>
+            </a>
+            @else
+            <div class="frame-child"></div>
+            <a class="register" href="{{route('signup')}}" id="register"
+            >Register</a
+            >
+            <a class="button13" href="{{route('login')}}">
+                <div class="button14">Login</div>
+            </a>
+            @endif
+        </div>
+    </div>
 
     <div class="movie-selection">
+        <a class="button1" href="{{route('showReview')}}" style="alignment: center">
+            <div class="button14">Review Forum</div>
+        </a><br><br>
         <div class="carousel">
             <div class="carousel-inner">
                 @foreach($movies as $mv)
@@ -36,6 +78,28 @@
             </a>
         </div>
     </div>
+
+    <div class="coming-soon-parent">
+        <div class="coming-soon">Coming Soon</div>
+        <div class="carousel2">
+            <div class="carousel-inner"><br><br>
+                @foreach($soon as $s)
+                <div class="carousel-item active">
+                    <img src="{{ asset('css/public-cust/'. $s->photo) }}">
+                    <b class="spider-man-no-way">{{$s->movies_name}}</b>
+                </div>
+                @endforeach
+            </div>
+            <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+
+
     <div class="food-and-beverage-parent">
         <div class="food-and-beverage">Food and Beverage</div>
         <a class="view-all1" href="{{route('products.index')}}">View All</a>
@@ -62,64 +126,6 @@
             <a class="carousel-control-next" href="#" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
-        </div>
-    </div>
-    <div class="coming-soon-parent">
-        <div class="coming-soon">Coming Soon</div>
-        <div class="carousel2">
-            <div class="carousel-inner"><br><br>
-                @foreach($soon as $s)
-                <div class="carousel-item active">
-                    <img src="{{ asset('css/public-cust/'. $s->photo) }}">
-                    <b class="spider-man-no-way">{{$s->movies_name}}</b>
-                </div>
-                @endforeach
-            </div>
-            <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
-        </div>
-    </div>
-
-
-    <div class="before-login">
-        <img
-            class="word-only-icon"
-            alt=""
-            src="{{ asset('css/public-cust/word-only.svg') }}"
-            id="wordOnly"
-        />
-
-        <div class="home-parent">
-            <a class="home13">
-                <div class="company">Home</div>
-            </a>
-            <a class="home13" href="{{route('MyTicketTransactionList')}}">
-                <a class="button11" href="{{route('MyTicketTransactionList')}}"
-                >My Tickets</a
-                >
-            </a>
-            <a class="home13" href="{{route('products.index')}}">
-                <a class="button11" href="{{route('products.index')}}"
-                >Food and Beverage</a
-                >
-            </a>
-            @if(Auth::check())
-            <a class="button13" href="{{route('logout')}}">
-                <div class="button14">{{Auth::user()->name}}</div>
-            </a>
-            @else
-            <div class="frame-child"></div>
-            <a class="register" href="{{route('signup')}}" id="register"
-            >Register</a
-            >
-            <a class="button13" href="{{route('login')}}">
-                <div class="button14">Login</div>
-            </a>
-            @endif
         </div>
     </div>
 </div>
