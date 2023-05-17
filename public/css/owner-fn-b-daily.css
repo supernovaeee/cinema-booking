@@ -142,14 +142,7 @@
   line-height: 32px;
   font-weight: 500;
   font-family: var(--font-roboto);
-  color: var(--color-whitesmoke-200);
   text-align: center;
-}
-.button16 {
-  background-color: var(--color-plum);
-  position: absolute;
-  left: 0;
-  height: 40px;
 }
 .button16,
 .button18,
@@ -166,16 +159,28 @@
   align-items: center;
   justify-content: center;
 }
+.button16 {
+  background-color: var(--color-plum);
+  position: absolute;
+  left: 0;
+  height: 40px;
+  color: var(--color-mediumslateblue-100);
+
+}
 .button18 {
   cursor: pointer;
   background-color: var(--color-mediumslateblue-100);
   position: absolute;
   left: 144px;
   height: 40px;
+  color: var(--color-whitesmoke-200);
+
 }
 .button20 {
   background-color: var(--color-plum);
   left: 288px;
+  color: var(--color-mediumslateblue-100);
+
 }
 .button-container,
 .button20,
@@ -184,6 +189,7 @@
   height: 40px;
 }
 .button22 {
+  cursor: pointer;
   border: 0;
   padding: var(--padding-base) var(--padding-xs);
   background-color: var(--color-plum);
@@ -197,6 +203,8 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  color: var(--color-mediumslateblue-100);
+
 }
 .button-container {
   top: 75px;

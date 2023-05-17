@@ -140,7 +140,6 @@
   line-height: 32px;
   font-weight: 500;
   font-family: var(--font-roboto);
-  color: var(--color-whitesmoke-200);
   text-align: center;
 }
 .button64,
@@ -164,10 +163,14 @@
   position: absolute;
   left: 0;
   height: 40px;
+  color: var(--color-whitesmoke-200);
+
 }
 .button66,
 .button68 {
   background-color: var(--color-plum);
+  color: var(--color-mediumslateblue-100);
+
 }
 .button66 {
   position: absolute;
@@ -199,6 +202,8 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  color: var(--color-mediumslateblue-100);
+
 }
 .button-parent5 {
   top: 75px;

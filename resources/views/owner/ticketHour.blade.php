@@ -5,6 +5,15 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
       <link rel="stylesheet" type="text/css" href="{{url('css/global.css')}}"/>
       <link rel="stylesheet" type="text/css" href="{{url('css/owner-ticket-sales-hour.css')}}"/>
+      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="//cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="//cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
@@ -68,18 +77,82 @@
 
       <div class="button-parent5">
           <a class="button64" href="ticketHour">
-              <div class="button17">Hourly</div>
+              <div class="button65">Hourly</div>
           </a>
           <a class="button66" href="ticketDaily">
-              <div class="button17">Daily</div>
+              <div class="button65">Daily</div>
           </a>
           <a class="button68" href="ticketWeek">
-              <div class="button17">Weekly</div>
+              <div class="button65">Weekly</div>
           </a>
           <a class="button70" href="ticketMonth">
-              <div class="button17">Monthly</div>
+              <div class="button65">Monthly</div>
           </a>
       </div>
+
+
+      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('ticketHour') }}" method="GET">
+          <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
+          <button type="submit">Search</button>
+      <br><br>
+      </form>
+
+
+      <div class="box_table">
+
+                  <table id="myTable" class="table table-striped table-bordered" style="width: 70%; margin-left: 15%;  margin-top: 5%;">
+                  <thead>
+                      <tr>
+                          <th style="width: 20%;">       
+                            <a href="{{ route('ticketHour', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
+                            <a href="{{ route('ticketHour', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
+                          <th style="width: 20%;">
+                            <a href="{{ route('ticketHour', ['sort' => 'time_frame', 'direction' => 'desc']) }}">Hour ↓</a>
+                            <a href="{{ route('ticketHour', ['sort' => 'time_frame', 'direction' => 'asc']) }}">↑</a>
+                          </th>
+                          <th>
+                              <a href="{{ route('ticketHour', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('ticketHour', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                          </th>
+                          <th>Movie Name</th>
+                          <th>Qty</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      @php
+                          $previousDate = null;
+                          $previousTimeFrame = null;
+                          $previousTotalPrice = null;
+                      @endphp
+                      @foreach($orders as $order)
+                      <tr>
+                          <td>
+                              @if ($order->date !== $previousDate)
+                                  {{ $order->date }}
+                              @endif
+                          </td>
+                          <td>
+                              @if ($order->time_frame !== $previousTimeFrame)
+                                  {{ $order->time_frame }}
+                              @endif
+                          </td>
+                          <td>
+                              @if ($order->time_frame !== $previousTimeFrame || $order->total_price !== $previousTotalPrice)
+                                  {{ $order->total_price }}
+                              @endif
+                          </td>
+                          <td>{{ $order->movies_name }}</td>
+                          <td>{{ $order->total_qty }}</td>
+                      </tr>
+                      @php
+                          $previousDate = $order->date;
+                          $previousTimeFrame = $order->time_frame;
+                          $previousTotalPrice = $order->total_price;
+                      @endphp
+                      @endforeach
+                  </tbody>
+                  </table>
+</div>
     </div>
   </body>
 </html>
