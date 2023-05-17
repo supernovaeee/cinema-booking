@@ -46,7 +46,7 @@ class purchaseMovies extends Controller
             $order->order_number = time();
             $price=studio_movies::join('branch_studio', 'studio_movies.id_branch_studio', '=', 'branch_studio.id_branch_studio')
                 ->join('studio','branch_studio.id_studio','=','studio.id_studio')
-                ->where('id_studio_movies',$r->studio_movies) ->value('studio.price');;
+                ->where('id_studio_movies',$r->studio_movies) ->value('studio.price');
             $seat=count($r->seats);
             $order->total_price = $price * $seat;
             $order->status=0;
