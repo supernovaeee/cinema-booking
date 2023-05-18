@@ -20,7 +20,7 @@ class showTicketWeek extends Controller
             DB::raw('CONCAT("Week ", WEEK(orders.created_at)) as week'),
             DB::raw('DATE_FORMAT(MIN(orders.created_at), "%d-%m-%Y") as start_date'),
             DB::raw('DATE_FORMAT(MAX(orders.created_at), "%d-%m-%Y") as end_date'),
-            DB::raw('COUNT(order_movies.id_order_movies) as total_qty'),
+            DB::raw('SUM(order_movies.qty) as total_qty'),
             DB::raw('SUM(orders.total_price) as total_price')
         )
             ->join('orders', 'order_movies.id_order', '=', 'orders.id_order')

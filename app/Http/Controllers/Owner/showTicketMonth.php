@@ -18,7 +18,7 @@ class showTicketMonth extends Controller
             'movies.movies_name',
             DB::raw('CONCAT("", MONTH(orders.created_at)) as month'),
             DB::raw('CONCAT("", YEAR(orders.created_at)) as year'),
-            DB::raw('COUNT(order_movies.id_order_movies) as total_qty'),
+            DB::raw('SUM(order_movies.qty) as total_qty'),
             DB::raw('SUM(orders.total_price) as total_price')
         )
             ->join('orders', 'order_movies.id_order', '=', 'orders.id_order')

@@ -17,7 +17,7 @@ class showTicketDaily extends Controller
         $query = order_movies::select(
             'movies.movies_name',
             DB::raw('DATE(orders.created_at) as date'),
-            DB::raw('COUNT(order_movies.id_order_movies) as total_qty'),
+            DB::raw('SUM(order_movies.qty) as total_qty'),
             DB::raw('SUM(orders.total_price) as total_price')
         )
             ->join('orders', 'order_movies.id_order', '=', 'orders.id_order')
