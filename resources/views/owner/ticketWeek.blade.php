@@ -24,7 +24,7 @@
     />
   </head>
   <body>
-    <div class="owner-ticket-sales-weekly">
+    <div class="owner-ticket-sales-weekly" data-scroll-to="ownerTicketSalesWeek">
       <div class="owner-ticket-sales-weekly-child"></div>
       <a class="owner-ticket-sales-weekly-inner">
         <div class="vuesaxlinearlogout-parent1">
@@ -96,7 +96,7 @@
       </form>
 
 
-      <div class="box_table">
+      <div class="scrollable-container" >
 
                   <table id="myTable" class="table table-striped table-bordered" style="width: 70%; margin-left: 15%;  margin-top: 5%;">
                   <thead>

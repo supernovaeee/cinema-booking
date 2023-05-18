@@ -32,6 +32,7 @@ Route::get('showTicketDaily',[App\Http\Controllers\Owner\showTicketDaily::class,
 Route::get('showTicketHour',[App\Http\Controllers\Owner\showTicketHour::class, 'showTicketHour'])->name('showTicketHour');
 
 Route::get('downloadReport',[App\Http\Controllers\Owner\downloadReport::class, 'downloadReport'])->name('downloadReport');
+Route::get('downloadReport/hour', [App\Http\Controllers\Owner\downloadReportHour::class, 'downloadReportHour'])->name('downloadReportHour');
 // Route::get('/downloadReportHour', 'downloadReportHour@downloadReportHour')->name('downloadReportHour');
 
 

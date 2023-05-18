@@ -24,7 +24,7 @@
     />
   </head>
   <body>
-    <div class="owner-ticket-sales-monthly">
+    <div class="owner-ticket-sales-monthly" data-scroll-to="ownerTicketSalesMonth">
       <div class="owner-ticket-sales-monthly-child"></div>
       <a class="owner-ticket-sales-monthly-inner">
         <div class="frame-div">
@@ -95,7 +95,7 @@
       <br><br>
       </form> 
 
-      <div class="box_table">
+      <div class="scrollable-container">
 
                   <table id="myTable" class="table table-striped table-bordered" style="width: 70%; margin-left: 15%;  margin-top: 5%;">
                   <thead>

@@ -1,3 +1,8 @@
+.scrollable-container {
+  height: 500px; /* Set the desired height for the scrollable container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
 .icon-short-text8 {
   position: relative;
   width: 22.25px;

@@ -19,7 +19,7 @@ class showTicketHour extends Controller
             'movies.movies_name',
             DB::raw('DATE_FORMAT(orders.created_at, "%H:00 - %H:59") as time_frame'),
             DB::raw('DATE(orders.created_at) as date'),
-            DB::raw('COUNT(order_movies.id_order_movies) as total_qty'),
+            DB::raw('SUM(order_movies.qty) as total_qty'),
             DB::raw('SUM(orders.total_price) as total_price')
         )
             ->join('orders', 'order_movies.id_order', '=', 'orders.id_order')

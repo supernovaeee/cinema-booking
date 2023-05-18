@@ -3,25 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-      <link rel="stylesheet" type="text/css" href="{{url('css/global.css')}}"/>
-      <link rel="stylesheet" type="text/css" href="{{url('css/owner-ticket-sales-hour.css')}}"/>
-      <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url('css/global.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url('css/owner-ticket-sales-hour.css')}}" />
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
     <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
     <script src="//cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <script src="//cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" />
   </head>
   <body>
     <div class="owner-ticket-sales-hour" data-scroll-to="ownerTicketSalesHour">
@@ -97,8 +90,7 @@
       <br><br>
       </form>
 
-
-      <div class="box_table">
+      <div class="scrollable-container">
 
                   <table id="myTable" class="table table-striped table-bordered" style="width: 70%; margin-left: 15%;  margin-top: 5%;">
                   <thead>

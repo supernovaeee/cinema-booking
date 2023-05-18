@@ -1,3 +1,7 @@
+.scrollable-container {
+  height: 500px; /* Set the desired height for the scrollable container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
 .owner-ticket-sales-daily-child {
   position: absolute;
   top: 0;
