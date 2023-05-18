@@ -33,6 +33,10 @@ Route::get('showTicketHour',[App\Http\Controllers\Owner\showTicketHour::class, '
 
 Route::get('downloadReport',[App\Http\Controllers\Owner\downloadReport::class, 'downloadReport'])->name('downloadReport');
 Route::get('downloadReport/hour', [App\Http\Controllers\Owner\downloadReportHour::class, 'downloadReportHour'])->name('downloadReportHour');
+Route::get('downloadReport/daily', [App\Http\Controllers\Owner\downloadReportDaily::class, 'downloadReportDaily'])->name('downloadReportDaily');
+Route::get('downloadReport/weekly', [App\Http\Controllers\Owner\downloadReportWeek::class, 'downloadReportWeek'])->name('downloadReportWeek');
+Route::get('downloadReport/monthly', [App\Http\Controllers\Owner\downloadReportMonth::class, 'downloadReportMonth'])->name('downloadReportMonth');
+
 // Route::get('/downloadReportHour', 'downloadReportHour@downloadReportHour')->name('downloadReportHour');
 
 

@@ -12,30 +12,31 @@ use League\Csv\Writer;
 use Carbon\Carbon;
 use SplTempFileObject;
 
-class downloadReportHour extends Controller
+class downloadReportMonth extends Controller
 {
-    public function downloadReportHour()
+    public function downloadReportMonth()
     {
 
         // Retrieve the data for the hourly sales report using your modified query logic
 
         $query = orders::select(
             'fnb.fnb_name',
-            DB::raw('DATE_FORMAT(orders.created_at, "%H:00 - %H:59") as time_frame'),
-            DB::raw('DATE(orders.created_at) as date'),
+            DB::raw('CONCAT("", MONTH(orders.created_at)) as month'),
+            DB::raw('CONCAT("", YEAR(orders.created_at)) as year'),
             DB::raw('SUM(order_detail.qty) as fnb_qty'),
             DB::raw('SUM(orders.total_price) as fnb_rev')
         )
             ->join('order_detail', 'orders.id_order', '=', 'order_detail.id_order')
             ->join('fnb', 'order_detail.id_fnb', '=', 'fnb.id_fnb')
             ->where('orders.status', '=', 0)
-            ->orderBy('time_frame', 'desc'); // Sort by the 'created_at' column in descending order
-        $orders = $query->groupBy('fnb.fnb_name', 'time_frame', 'date')->get();
+            ->orderBy('year', 'desc') // Sort by the 'year' column in descending order
+            ->orderBy('month', 'desc'); // Sort by the 'month' column in descending order
+        $orders = $query->groupBy('fnb.fnb_name', 'year', 'month')->get();
 
         $query2 = order_movies::select(
             'movies.movies_name',
-            DB::raw('DATE_FORMAT(orders.created_at, "%H:00 - %H:59") as time_frame'),
-            DB::raw('DATE(orders.created_at) as date'),
+            DB::raw('CONCAT("", MONTH(orders.created_at)) as month'),
+            DB::raw('CONCAT("", YEAR(orders.created_at)) as year'),
             DB::raw('SUM(order_movies.qty) as movie_qty'),
             DB::raw('SUM(orders.total_price) as movie_rev')
         )
@@ -43,8 +44,9 @@ class downloadReportHour extends Controller
             ->join('studio_movies', 'order_movies.id_studio_movies', '=', 'studio_movies.id_studio_movies')
             ->join('movies', 'studio_movies.id_movies', '=', 'movies.id_movies')
             ->where('orders.status', '=', 0)
-            ->orderBy('time_frame', 'desc'); // Sort by the 'created_at' column in descending order
-        $orders2 = $query2->groupBy('movies.movies_name', 'time_frame', 'date')->get();
+            ->orderBy('year', 'desc') // Sort by the 'year' column in descending order
+            ->orderBy('month', 'desc'); // Sort by the 'month' column in descending order
+        $orders2 = $query2->groupBy('movies.movies_name', 'year', 'month')->get();
         $mergedOrders = $orders->concat($orders2);
 
 
@@ -52,14 +54,13 @@ class downloadReportHour extends Controller
         $csv = Writer::createFromFileObject(new SplTempFileObject());
 
         // Add the CSV header row
-        $csv->insertOne(['Time Frame', 'Date', 'Food/Beverage', 'Food/Beverage Quantity', 'Food/Beverage Revenues', 'Movie Name', 'Movie Quantity', 'Movie Revenues']);
-        // $csv->insertOne(['Date', 'Hour', 'Revenues', 'Food/Beverage', 'Qty']);
+        $csv->insertOne(['Year', 'Month', 'Food/Beverage', 'Food/Beverage Quantity', 'Food/Beverage Revenues', 'Movie Name', 'Movie Quantity', 'Movie Revenues']);
 
         // Add the data rows to the CSV
         foreach ($mergedOrders as $order) {
             $csv->insertOne([
-                $order->date,
-                $order->time_frame,
+                $order->year,
+                $order->month,
                 $order->fnb_rev,
                 $order->fnb_name,
                 $order->fnb_qty,
@@ -72,7 +73,7 @@ class downloadReportHour extends Controller
         // Set the headers for file download
         $headers = [
             'Content-Type' => 'text/csv',
-            'Content-Disposition' => 'attachment; filename="sales_report_hourly.csv"',
+            'Content-Disposition' => 'attachment; filename="sales_report_monthly.csv"',
         ];
 
         // Generate the CSV file and force download

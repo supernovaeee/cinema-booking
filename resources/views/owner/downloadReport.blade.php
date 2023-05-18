@@ -53,13 +53,13 @@
       <a href="{{ route('downloadReportHour') }}" class="button48">
         <div class="button49">Hourly</div>
       </a>
-      <a class="button48">
+      <a href="{{ route('downloadReportDaily') }}" class="button48">
         <div class="button49">Daily</div>
       </a>
-      <a class="button48">
+      <a href="{{ route('downloadReportWeek') }}" class="button48">
         <div class="button49">Weekly</div>
       </a>
-      <a class="button48">
+      <a href="{{ route('downloadReportMonth') }}" class="button48">
         <div class="button49">Monthly</div>
       </a>
     </div>
