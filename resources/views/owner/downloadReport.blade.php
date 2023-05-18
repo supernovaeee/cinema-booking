@@ -39,7 +39,7 @@
       <div class="frame-parent4">
         <a
           class="icon-short-text-parent3"
-          href="ticketHour"
+          href="showTicketHour"
           id="frameLink1"
         >
           <img
@@ -52,7 +52,7 @@
         </a>
         <a
           class="icon-burger-parent4"
-          href="fnbHour"
+          href="showFnbHour"
           id="frameLink2"
         >
           <img class="icon-burger6" alt="" src="{{ asset('css/public2/-icon-burger2.svg') }}" />

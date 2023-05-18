@@ -40,20 +40,20 @@
       <img class="group-icon5" alt="" src="{{ asset('css/public2/group1.svg') }}" />
 
       <div class="button-parent2">
-          <a class="button40" href="ticketHour">
+          <a class="button40" href="showTicketHour">
               <div class="button41">Hourly</div>
           </a>
-          <a class="button42" href="ticketDaily">
+          <a class="button42" href="showTicketDaily">
               <div class="button41">Daily</div>
           </a>
-          <a class="button44" href="ticketWeek">
+          <a class="button44" href="showTicketWeek">
               <div class="button41">Weekly</div>
           </a>
-          <a class="button46" href="ticketMonth">
+          <a class="button46" href="showTicketMonth">
               <div class="button41">Monthly</div>
           </a>
       </div>
-      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('ticketDaily') }}" method="GET">
+      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('showTicketDaily') }}" method="GET">
           <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
           <button type="submit">Search</button>
       <br><br>
@@ -66,12 +66,12 @@
                   <thead>
                       <tr>
                           <th style="width: 20%;">       
-                            <a href="{{ route('ticketDaily', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
-                            <a href="{{ route('ticketDaily', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
+                            <a href="{{ route('showTicketDaily', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
+                            <a href="{{ route('showTicketDaily', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>
-                              <a href="{{ route('ticketDaily', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
-                              <a href="{{ route('ticketDaily', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showTicketDaily', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('showTicketDaily', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>Movie Name</th>
                           <th>Qty</th>
@@ -117,7 +117,7 @@
         </a>
         <a
           class="icon-burger-parent3"
-          href="fnbDaily"
+          href="showFnbDaily"
           id="frameLink2"
         >
           <img class="icon-burger5" alt="" src="{{ asset('css/public2/-icon-burger1.svg') }}" />
@@ -127,7 +127,7 @@
         </a>
         <a
           class="icon-bar-chart-parent3"
-          href="./owner-trends.html"
+          href="downloadReport"
           id="frameLink3"
         >
           <img

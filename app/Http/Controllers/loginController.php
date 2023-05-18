@@ -47,7 +47,7 @@ class loginController extends Controller
         }
         else if(Auth::attempt($owner)){
             //            dd(Auth::check());
-                        return redirect()->route('ticketDaily');
+                        return redirect()->route('showTicketDaily');
                     }
         else {
             return redirect()->back()->withErrors(['wrong']);

@@ -24,7 +24,7 @@
     />
   </head>
   <body>
-    <div class="owner-fnb-daily" data-scroll-to="ownerFnBDaily">
+    <div class="owner-fnb-daily" data-scroll-to="ownershowFnbDaily">
       <div class="owner-fnb-daily-child"></div>
         <a class="owner-fnb-daily-inner">
           <div class="vuesaxlinearlogout-container">
@@ -43,7 +43,7 @@
         
         <a
           class="icon-short-text-container"
-          href="ticketDaily"
+          href="showTicketDaily"
           id="frameLink1"
         >
           <img
@@ -62,7 +62,7 @@
         </div>
         <a
           class="icon-bar-chart-container"
-          href="trends"
+          href="downloadReport"
           id="frameLink2"
         >
           <img
@@ -76,22 +76,22 @@
         </a>
       </div>
       <div class="button-container">
-          <a class="button16" href="fnbHour">
+          <a class="button16" href="showFnbHour">
               <div class="button17">Hourly</div>
           </a>
-          <a class="button18" href="fnbDaily">
+          <a class="button18" href="showFnbDaily">
               <div class="button17">Daily</div>
           </a>
-          <a class="button20" href="fnbWeek">
+          <a class="button20" href="showFnbWeek">
               <div class="button17">Weekly</div>
           </a>
-          <a class="button22" href="fnbMonth">
+          <a class="button22" href="showFnbMonth">
               <div class="button17">Monthly</div>
           </a>
       </div>
 
 <!-- <h1 class="active-users-wrapper"> -->
-<form style="margin-left: 15%; margin-top: 10%" action="{{ route('fnbDaily') }}" method="GET">
+<form style="margin-left: 15%; margin-top: 10%" action="{{ route('showFnbDaily') }}" method="GET">
           <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
           <button type="submit">Search</button>
       <br><br>
@@ -104,12 +104,12 @@
                   <thead>
                       <tr>
                           <th style="width: 30%;">
-                              <a href="{{ route('fnbDaily', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
-                              <a href="{{ route('fnbDaily', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showFnbDaily', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
+                              <a href="{{ route('showFnbDaily', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>
-                              <a href="{{ route('fnbDaily', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
-                              <a href="{{ route('fnbDaily', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showFnbDaily', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('showFnbDaily', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>Food / Beverage</th>
                           <th>Qty</th>

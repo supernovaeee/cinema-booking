@@ -42,7 +42,7 @@
       <div class="frame-parent">
         <a
           class="icon-short-text-parent"
-          href="ticketMonth"
+          href="showTicketMonth"
           id="frameLink1"
         >
           <img
@@ -61,7 +61,7 @@
         </div>
         <a
           class="icon-bar-chart-parent"
-          href="trends"
+          href="downloadReport"
           id="frameLink2"
         >
           <img
@@ -75,20 +75,20 @@
         </a>
       </div>
       <div class="button-parent">
-          <a class="button" href="fnbHour">
+          <a class="button" href="showFnbHour">
               <div class="button1">Hourly</div>
           </a>
-          <a class="button2" href="fnbDaily">
+          <a class="button2" href="showFnbDaily">
               <div class="button1">Daily</div>
           </a>
-          <a class="button4" href="fnbWeek">
+          <a class="button4" href="showFnbWeek">
               <div class="button1">Weekly</div>
           </a>
-          <a class="button6" href="fnbMonth">
+          <a class="button6" href="showFnbMonth">
               <div class="button1">Monthly</div>
           </a>
       </div>
-      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('fnbWeek') }}" method="GET">
+      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('showFnbWeek') }}" method="GET">
           <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
           <button type="submit">Search</button>
       <br><br>
@@ -99,12 +99,12 @@
 <thead>
     <tr>
         <th style="width: 10%;">
-            <a href="{{ route('fnbMonth', ['sort' => 'month', 'direction' => 'desc']) }}">Month ↓</a>
-            <a href="{{ route('fnbMonth', ['sort' => 'month', 'direction' => 'asc']) }}">↑</a>
+            <a href="{{ route('showFnbMonth', ['sort' => 'month', 'direction' => 'desc']) }}">Month ↓</a>
+            <a href="{{ route('showFnbMonth', ['sort' => 'month', 'direction' => 'asc']) }}">↑</a>
         </th>
         <th>
-            <a href="{{ route('fnbMonth', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
-            <a href="{{ route('fnbMonth', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+            <a href="{{ route('showFnbMonth', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+            <a href="{{ route('showFnbMonth', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
         </th>
         <th>Food / Beverage</th>
         <th>Qty</th>

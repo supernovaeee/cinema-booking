@@ -42,7 +42,7 @@
       <div class="frame-parent5" data-scroll-to="groupContainer">
         <a
           class="icon-short-text-parent4"
-          href="ticketHour"
+          href="showTicketHour"
           id="frameLink1"
         >
           <img
@@ -61,7 +61,7 @@
         </div>
         <a
           class="icon-bar-chart-parent5"
-          href="trends"
+          href="downloadReport"
           id="frameLink2"
         >
           <img
@@ -75,20 +75,20 @@
         </a>
       </div>
       <div class="button-parent4">
-          <a class="button56" href="fnbHour">
+          <a class="button56" href="showFnbHour">
               <div class="button57">Hourly</div>
           </a>
-          <a class="button58" href="fnbDaily">
+          <a class="button58" href="showFnbDaily">
               <div class="button57">Daily</div>
           </a>
-          <a class="button60" href="fnbWeek">
+          <a class="button60" href="showFnbWeek">
               <div class="button57">Weekly</div>
           </a>
-          <a class="button62" href="fnbMonth">
+          <a class="button62" href="showFnbMonth">
               <div class="button57">Monthly</div>
           </a>
       </div>
-      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('fnbHour') }}" method="GET">
+      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('showFnbHour') }}" method="GET">
           <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
           <button type="submit">Search</button>
       <br><br>
@@ -101,15 +101,15 @@
                   <thead>
                       <tr>
                           <th style="width: 20%;">       
-                            <a href="{{ route('fnbHour', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
-                            <a href="{{ route('fnbHour', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
+                            <a href="{{ route('showFnbHour', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
+                            <a href="{{ route('showFnbHour', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
                           <th style="width: 20%;">
-                            <a href="{{ route('fnbHour', ['sort' => 'time_frame', 'direction' => 'desc']) }}">Hour ↓</a>
-                            <a href="{{ route('fnbHour', ['sort' => 'time_frame', 'direction' => 'asc']) }}">↑</a>
+                            <a href="{{ route('showFnbHour', ['sort' => 'time_frame', 'direction' => 'desc']) }}">Hour ↓</a>
+                            <a href="{{ route('showFnbHour', ['sort' => 'time_frame', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>
-                              <a href="{{ route('fnbHour', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
-                              <a href="{{ route('fnbHour', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showFnbHour', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('showFnbHour', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>Food / Beverage</th>
                           <th>Qty</th>

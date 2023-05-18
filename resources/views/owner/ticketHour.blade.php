@@ -38,7 +38,7 @@
           </a>
           <a
             class="icon-burger-parent6"
-            href="fnbHour"
+            href="showFnbHour"
             id="frameLink1"
           >
             <img class="icon-burger8" alt="" src="{{ asset('css/public2/-icon-burger2.svg') }}" />
@@ -48,7 +48,7 @@
           </a>
           <a
             class="icon-bar-chart-parent6"
-            href="trends"
+            href="downloadReport"
             id="frameLink2"
           >
             <img
@@ -76,22 +76,22 @@
       <img class="group-icon8" alt="" src="{{ asset('css/public2/group2.svg') }}" />
 
       <div class="button-parent5">
-          <a class="button64" href="ticketHour">
+          <a class="button64" href="showTicketHour">
               <div class="button65">Hourly</div>
           </a>
-          <a class="button66" href="ticketDaily">
+          <a class="button66" href="showTicketDaily">
               <div class="button65">Daily</div>
           </a>
-          <a class="button68" href="ticketWeek">
+          <a class="button68" href="showTicketWeek">
               <div class="button65">Weekly</div>
           </a>
-          <a class="button70" href="ticketMonth">
+          <a class="button70" href="showTicketMonth">
               <div class="button65">Monthly</div>
           </a>
       </div>
 
 
-      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('ticketHour') }}" method="GET">
+      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('showTicketHour') }}" method="GET">
           <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
           <button type="submit">Search</button>
       <br><br>
@@ -104,15 +104,15 @@
                   <thead>
                       <tr>
                           <th style="width: 20%;">       
-                            <a href="{{ route('ticketHour', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
-                            <a href="{{ route('ticketHour', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
+                            <a href="{{ route('showTicketHour', ['sort' => 'date', 'direction' => 'desc']) }}">Date ↓</a>
+                            <a href="{{ route('showTicketHour', ['sort' => 'date', 'direction' => 'asc']) }}">↑</a>
                           <th style="width: 20%;">
-                            <a href="{{ route('ticketHour', ['sort' => 'time_frame', 'direction' => 'desc']) }}">Hour ↓</a>
-                            <a href="{{ route('ticketHour', ['sort' => 'time_frame', 'direction' => 'asc']) }}">↑</a>
+                            <a href="{{ route('showTicketHour', ['sort' => 'time_frame', 'direction' => 'desc']) }}">Hour ↓</a>
+                            <a href="{{ route('showTicketHour', ['sort' => 'time_frame', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>
-                              <a href="{{ route('ticketHour', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
-                              <a href="{{ route('ticketHour', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showTicketHour', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('showTicketHour', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>Movie Name</th>
                           <th>Qty</th>
