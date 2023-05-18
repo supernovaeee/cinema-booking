@@ -24,7 +24,7 @@
     />
   </head>
   <body>
-    <div class="owner-ticket-sales-monthly">
+    <div class="owner-ticket-sales-monthly" data-scroll-to="ownerTicketSalesMonth">
       <div class="owner-ticket-sales-monthly-child"></div>
       <a class="owner-ticket-sales-monthly-inner">
         <div class="frame-div">
@@ -40,16 +40,16 @@
       <img class="group-icon3" alt="" src="{{ asset('css/public2/group.svg') }}" />
 
       <div class="group-div">
-          <a class="button24" href="ticketHour">
+          <a class="button24" href="showTicketHour">
               <div class="button25">Hourly</div>
           </a>
-          <a class="button26" href="ticketDaily">
+          <a class="button26" href="showTicketDaily">
               <div class="button25">Daily</div>
           </a>
-          <a class="button28" href="ticketWeek">
+          <a class="button28" href="showTicketWeek">
               <div class="button25">Weekly</div>
           </a>
-          <a class="button30" href="ticketMonth">
+          <a class="button30" href="showTicketMonth">
               <div class="button25">Monthly</div>
           </a>
       </div>
@@ -66,7 +66,7 @@
         </a>
         <a
           class="icon-burger-parent1"
-          href="fnbMonth"
+          href="showFnbMonth"
           id="frameLink2"
         >
           <img class="icon-burger3" alt="" src="{{ asset('css/public2/-icon-burger1.svg') }}" />
@@ -76,7 +76,7 @@
         </a>
         <a
           class="icon-bar-chart-parent1"
-          href="trends"
+          href="downloadReport"
           id="frameLink3"
         >
           <img
@@ -89,24 +89,24 @@
           <img class="vuesaxlinearlogout-icon3" alt="" />
         </a>
       </div>
-      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('ticketMonth') }}" method="GET">
+      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('showTicketMonth') }}" method="GET">
           <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
           <button type="submit">Search</button>
       <br><br>
       </form> 
 
-      <div class="box_table">
+      <div class="scrollable-container">
 
                   <table id="myTable" class="table table-striped table-bordered" style="width: 70%; margin-left: 15%;  margin-top: 5%;">
                   <thead>
                       <tr>
                           <th style="width: 10%;">
-                              <a href="{{ route('ticketMonth', ['sort' => 'month', 'direction' => 'desc']) }}">Month ↓</a>
-                              <a href="{{ route('ticketMonth', ['sort' => 'month', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showTicketMonth', ['sort' => 'month', 'direction' => 'desc']) }}">Month ↓</a>
+                              <a href="{{ route('showTicketMonth', ['sort' => 'month', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>
-                              <a href="{{ route('ticketMonth', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
-                              <a href="{{ route('ticketMonth', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showTicketMonth', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('showTicketMonth', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>Movie Name</th>
                           <th>Qty</th>

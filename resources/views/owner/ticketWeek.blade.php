@@ -24,7 +24,7 @@
     />
   </head>
   <body>
-    <div class="owner-ticket-sales-weekly">
+    <div class="owner-ticket-sales-weekly" data-scroll-to="ownerTicketSalesWeek">
       <div class="owner-ticket-sales-weekly-child"></div>
       <a class="owner-ticket-sales-weekly-inner">
         <div class="vuesaxlinearlogout-parent1">
@@ -40,16 +40,16 @@
       <img class="group-icon4" alt="" src="{{ asset('css/public2/group1.svg') }}" />
 
       <div class="button-parent1">
-          <a class="button32" href="ticketHour">
+          <a class="button32" href="showTicketHour">
               <div class="button33">Hourly</div>
           </a>
-          <a class="button34" href="ticketDaily">
+          <a class="button34" href="showTicketDaily">
               <div class="button33">Daily</div>
           </a>
-          <a class="button36" href="ticketWeek">
+          <a class="button36" href="showTicketWeek">
               <div class="button33">Weekly</div>
           </a>
-          <a class="button38" href="ticketMonth">
+          <a class="button38" href="showTicketMonth">
               <div class="button33">Monthly</div>
           </a>
       </div>
@@ -66,7 +66,7 @@
         </a>
         <a
           class="icon-burger-parent2"
-          href="fnbWeek"
+          href="showFnbWeek"
           id="frameLink2"
         >
           <img class="icon-burger4" alt="" src="{{ asset('css/public2/-icon-burger1.svg') }}" />
@@ -76,7 +76,7 @@
         </a>
         <a
           class="icon-bar-chart-parent2"
-          href="trends"
+          href="downloadReport"
           id="frameLink3"
         >
           <img
@@ -89,26 +89,26 @@
           <img class="vuesaxlinearlogout-icon4" alt="" />
         </a>
       </div>
-      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('ticketWeek') }}" method="GET">
+      <form style="margin-left: 15%; margin-top: 10%" action="{{ route('showTicketWeek') }}" method="GET">
           <input type="text" name="search" placeholder="Search..." value="{{ request()->input('search') }}">
           <button type="submit">Search</button>
       <br><br>
       </form>
 
 
-      <div class="box_table">
+      <div class="scrollable-container" >
 
                   <table id="myTable" class="table table-striped table-bordered" style="width: 70%; margin-left: 15%;  margin-top: 5%;">
                   <thead>
                       <tr>
                           <th style="width: 10%;">
-                              <a href="{{ route('ticketWeek', ['sort' => 'week', 'direction' => 'desc']) }}">Week ↓</a>
-                              <a href="{{ route('ticketWeek', ['sort' => 'week', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showTicketWeek', ['sort' => 'week', 'direction' => 'desc']) }}">Week ↓</a>
+                              <a href="{{ route('showTicketWeek', ['sort' => 'week', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th style="width: 25%;">Date Range</th>
                           <th>
-                              <a href="{{ route('ticketWeek', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
-                              <a href="{{ route('ticketWeek', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
+                              <a href="{{ route('showTicketWeek', ['sort' => 'total_price', 'direction' => 'desc']) }}">Revenues ↓</a>
+                              <a href="{{ route('showTicketWeek', ['sort' => 'total_price', 'direction' => 'asc']) }}">↑</a>
                           </th>
                           <th>Movie Name</th>
                           <th>Qty</th>

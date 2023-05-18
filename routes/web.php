@@ -19,19 +19,26 @@ use App\Http\Controllers\UserControllers;
 //     return view('welcome');
 // });
 
-Route::get('fnbDaily',[Owner::class, 'fnbDaily'])->name('fnbDaily');
+
 //cinema-owner
-// Route::get('fnbDaily',[Owner::class, 'fnbDaily']);
-Route::get('fnbMonth',[Owner::class, 'fnbMonth'])->name('fnbMonth');
-Route::get('fnbWeek',[Owner::class, 'fnbWeek'])->name('fnbWeek');
-Route::get('fnbHour',[Owner::class, 'fnbHour'])->name('fnbHour');
+Route::get('showFnbMonth',[App\Http\Controllers\Owner\showFnbMonth::class, 'showFnbMonth'])->name('showFnbMonth');
+Route::get('showFnbWeek',[App\Http\Controllers\Owner\showFnbWeek::class, 'showFnbWeek'])->name('showFnbWeek');
+Route::get('showFnbDaily',[App\Http\Controllers\Owner\showFnbDaily::class, 'showFnbDaily'])->name('showFnbDaily');
+Route::get('showFnbHour',[App\Http\Controllers\Owner\showFnbHour::class, 'showFnbHour'])->name('showFnbHour');
 
-Route::get('ticketDaily',[Owner::class, 'ticketDaily'])->name('ticketDaily');
-Route::get('ticketMonth',[Owner::class, 'ticketMonth'])->name('ticketMonth');
-Route::get('ticketWeek',[Owner::class, 'ticketWeek'])->name('ticketWeek');
-Route::get('ticketHour',[Owner::class, 'ticketHour'])->name('ticketHour');
+Route::get('showTicketMonth',[App\Http\Controllers\Owner\showTicketMonth::class, 'showTicketMonth'])->name('showTicketMonth');
+Route::get('showTicketWeek',[App\Http\Controllers\Owner\showTicketWeek::class, 'showTicketWeek'])->name('showTicketWeek');
+Route::get('showTicketDaily',[App\Http\Controllers\Owner\showTicketDaily::class, 'showTicketDaily'])->name('showTicketDaily');
+Route::get('showTicketHour',[App\Http\Controllers\Owner\showTicketHour::class, 'showTicketHour'])->name('showTicketHour');
 
-Route::get('trends',[Owner::class, 'trends'])->name('trends');
+Route::get('downloadReport',[App\Http\Controllers\Owner\downloadReport::class, 'downloadReport'])->name('downloadReport');
+Route::get('downloadReport/hour', [App\Http\Controllers\Owner\downloadReportHour::class, 'downloadReportHour'])->name('downloadReportHour');
+Route::get('downloadReport/daily', [App\Http\Controllers\Owner\downloadReportDaily::class, 'downloadReportDaily'])->name('downloadReportDaily');
+Route::get('downloadReport/weekly', [App\Http\Controllers\Owner\downloadReportWeek::class, 'downloadReportWeek'])->name('downloadReportWeek');
+Route::get('downloadReport/monthly', [App\Http\Controllers\Owner\downloadReportMonth::class, 'downloadReportMonth'])->name('downloadReportMonth');
+
+// Route::get('/downloadReportHour', 'downloadReportHour@downloadReportHour')->name('downloadReportHour');
+
 
 //website
 Route::get('index',[App\Http\Controllers\Customer\viewMovies::class, 'home'])->name('index');
