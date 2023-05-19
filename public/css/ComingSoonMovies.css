@@ -1,0 +1,248 @@
+.wait-for-its {
+  position: absolute;
+  top: 164px;
+  left: 72px;
+  font-size: var(--other-roboto-bold-16-size);
+  line-height: 24px;
+  color: var(--shade-700);
+}
+.picture-icon13 {
+  position: relative;
+  width: 359px;
+  height: 507px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.the-matrix-resurections {
+  align-self: stretch;
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+}
+.the-matrix-resurections-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.coming-soon-movies1,
+.coming-soon-movies2,
+.coming-soon-movies3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-34xl);
+}
+.coming-soon-movies2,
+.coming-soon-movies3 {
+  left: 440px;
+}
+.coming-soon-movies3 {
+  left: 880px;
+}
+.coming-soon-movies-parent {
+  position: absolute;
+  top: 252px;
+  left: 72px;
+  width: 1239px;
+  height: 624px;
+  font-size: var(--header-header-h3-size);
+}
+.coming-soon1 {
+  position: absolute;
+  top: 104px;
+  left: 72px;
+  font-size: var(--header-header-h2-size);
+}
+.company9 {
+  position: relative;
+  font-weight: 500;
+}
+.button171 {
+  position: relative;
+  line-height: 24px;
+}
+.home157 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.content35 {
+  flex-direction: column;
+  gap: var(--gap-lg);
+  font-size: var(--other-roboto-bold-16-size);
+}
+.content35,
+.footer-content30,
+.footers-description10,
+.home164 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer-content30 {
+  flex-direction: column;
+  gap: var(--gap-5xl);
+}
+.footers-description10,
+.home164 {
+  flex-direction: row;
+}
+.home164 {
+  border: 0;
+  background-color: transparent;
+}
+.footers-description10 {
+  position: absolute;
+  top: 40px;
+  left: 320px;
+  gap: var(--gap-77xl);
+}
+.instagram-icon10 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.follow-social-media-parent8,
+.instagram-parent8 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.follow-social-media-parent8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  gap: var(--gap-5xl);
+}
+.social-media-and-download-apps10 {
+  position: absolute;
+  top: 40px;
+  left: 1008px;
+  width: 161px;
+  height: 69px;
+  text-align: left;
+}
+.divider32 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--shade-300);
+  width: 1440px;
+  height: 1px;
+}
+.footer10,
+.group-icon9 {
+  position: absolute;
+  overflow: hidden;
+}
+.group-icon9 {
+  height: 33.33%;
+  width: 11.6%;
+  top: 9.72%;
+  right: 84.58%;
+  bottom: 56.94%;
+  left: 3.82%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.footer10 {
+  top: 1054px;
+  left: 0;
+  background-color: var(--white);
+  width: 1440px;
+  height: 360px;
+  text-align: center;
+}
+.frame-inner,
+.word-only-icon9 {
+  position: relative;
+  flex-shrink: 0;
+}
+.word-only-icon9 {
+  width: 110px;
+  height: 81px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.frame-inner {
+  background-color: var(--shade-400);
+  width: 2px;
+  height: 24px;
+}
+.button185,
+.register1 {
+  position: relative;
+  font-weight: 500;
+}
+.register1 {
+  text-align: left;
+  cursor: pointer;
+}
+.button185 {
+  flex: 1;
+  font-size: var(--body-body-large-size);
+  font-family: var(--header-header-h3);
+  color: var(--pastel-yellow);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24.07px;
+}
+.button184 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xs) var(--padding-5xs);
+  background-color: var(--color-blue);
+  border-radius: 5.07px;
+  width: 101px;
+  height: 48px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.before-login1,
+.button184,
+.home-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.home-group {
+  justify-content: flex-end;
+  gap: var(--gap-29xl);
+}
+.before-login1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  width: 1440px;
+  padding: var(--padding-5xs) var(--padding-53xl);
+  box-sizing: border-box;
+  justify-content: space-between;
+  text-align: center;
+}
+.coming-soon-movies {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 1414px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--body-body-large-size);
+  color: var(--shade-900);
+  font-family: var(--header-header-h3);
+}
